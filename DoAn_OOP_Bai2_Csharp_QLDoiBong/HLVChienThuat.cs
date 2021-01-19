@@ -43,8 +43,9 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             this.iKinhNghiem = kinhnghiem;
         }
 
-        public HLVChienThuat(string hoten, double luongcoban, string cmnd, string rank) : base(hoten, luongcoban, cmnd)
+        public HLVChienThuat(string hoten, double luongcoban, string cmnd,int namsinh, string rank) : base(hoten, luongcoban, cmnd, namsinh)
         {
+            this.iNamSinh = namsinh;
             this.sRank = rank;
         }
         public override void Nhap()
@@ -52,7 +53,7 @@ namespace DoAn_OOP_Bai2_Csharp_QLDoiBong
             Console.WriteLine("Moi nhap thong tin HLV Chien Thuat ~~ ");
             base.Nhap();
 
-            Console.Write("Moi nhap han cua HLV //Hang: C_B_A_Pro : ");
+            Console.Write("Moi nhap hang cua HLV //Hang: C_B_A_Pro : ");
             this.sRank = Console.ReadLine();
 
             Console.Write("Moi nhap Quoc Gia cua HLV: ");
